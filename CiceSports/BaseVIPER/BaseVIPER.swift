@@ -10,8 +10,6 @@ import UIKit
 
 
 
-
-
 class BaseViewController<P>: UIViewController {
     var presenter: P?
     
@@ -41,19 +39,75 @@ class BaseViewController<P>: UIViewController {
     }
 }
 
+
 //MARK: - BasePresenter
-class BasePresenter<V, R> {
+
+class BasePresenter<V, R> { //Vista y Router
     
+    internal var viewController: V?
+    internal var router: R?
+    
+    convenience init(viewController: V? = nil, router: R? = nil) { //el router lo puedo inicializar o no
+        self.init()
+        self.viewController = viewController
+        self.router = router
+    }
 }
+
+
 
 //MARK: - BaseRouter
-class BaseRouter<V, P> { //El Interactor puede ser un comodín o inyectarlo siempre.
+
+class BaseRouter<P> {    // I - El Interactor puede ser un comodín o inyectarlo siempre.
+                         // Cómo vamos a desplazarnos y navegar entre los distintos controladores.
     
+    internal var presenter: P?
+    internal var viewController: UIViewController?
+    
+    convenience init(presenter: P? = nil, view: UIViewController? = nil) {
+        self.init()
+        self.presenter = presenter
+        self.viewController = view
+    }
+    
+    internal func showVC(_ vc: UIViewController){  //El show es de tipo PUSH
+        if let navigationController = viewController?.navigationController {
+                                                    //Lo que hace es mirar si hay algo o no.
+            navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
+    internal func presentVC(_ vcToPresent: UIViewController, animated flag: Bool, completion: (() -> Swift.Void)? = nil){
+                                                                                            //
+        if let navigationController = viewController?.navigationController {
+            navigationController.present(vcToPresent, animated: flag, completion: completion)
+        }
+        viewController?.present(vcToPresent, animated: flag, completion: completion)
+    }
 }
 
-//MARK: - BaseInteractor
+
+//MARK: -BaseNavigationController
+
+class BaseNavigationController: UINavigationController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+
+
+
+//MARK: - BaseInteractor (BusinessModel)
+
 class BaseInteractor<P> {
     
+    internal var presenter: P?
+    
+    convenience init(presenter: P) {
+        self.init()
+        self.presenter = presenter
+    }
 }
 
 
@@ -71,13 +125,14 @@ VIPER - Todo esto debería estar incluido en un controlador de vista -  Esta es 
 - Coordinator (Assembly) - Ensambla todas las piezas.
  
  
- Todas estas clases son Injección de dependencias.
+ . Todas estas clases son Injecciones de dependencias.
  
- Cada vez que aparezca un "viewDid..." es que hay un delegado x detrás.
+ . Cada vez que aparezca un "viewDid..." es que hay un delegado x detrás.
  
- Como se identifica un patrón Singleton en iOS: por la palabra Shared, Default y....
-  Controla la carga perezosa de ciertos de datos en la aplicación en cierto momento.
-  Con la creación de protocolos no es necesario.
-  Es respetable pero no es la mejor de las prácticas.
-  Revisar en MEDIUM los 5 patrones más importantes.
+ . Como se identifica un patrón Singleton en iOS: por la palabra Shared, Default y....
+   Controla la carga perezosa de ciertos de datos en la aplicación en cierto momento.
+   Con la creación de protocolos no es necesario.
+   Es respetable pero no es la mejor de las prácticas.
+   Revisar en MEDIUM los 5 patrones más importantes.
+ . Todo esto es la base del StoryBoard
 */

@@ -12,12 +12,12 @@ protocol AppAssemblyProtocol {
     func setPrincipalViewController(in window: UIWindow) // Presentación de manera pública a través del protocolo.
 }
 
-class AppAssembly: AppAssemblyProtocol {
+class AppAssembly: AppAssemblyProtocol {  //Aquí vamos a personalizar toda la interfaz y el appdelegate quedará limpio
     
     var actualViewController: UIViewController!
     
     internal func setPrincipalViewController(in window: UIWindow) {  //internal lo hace super privado
-        actualViewController = SplashViewController()
+        actualViewController = SplashAssembly.splashNavigationController() //Puedo quitarle el navigation y solo usar splash...
         window.rootViewController = actualViewController
         window.makeKeyAndVisible()
         

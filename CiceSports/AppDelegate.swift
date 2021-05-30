@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 /*
+ 
+ - Solo debe esatr lo concerniente al ciclo de vida de la app
  - Meter chicha en el appdelegate no es buena práctica. Solo notificaciones psh y cosas así,. Nada más
  - Esto es un patrón Singleton:  Controla la carga perezosa de ciertos de datos en la aplicación en cierto momento.
  

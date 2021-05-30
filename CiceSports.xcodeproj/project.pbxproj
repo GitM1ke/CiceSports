@@ -14,6 +14,10 @@
 		38AAD91C2663D8690020AFB4 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AAD91A2663D8690020AFB4 /* SplashViewController.xib */; };
 		38AAD9202663E21C0020AFB4 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD91F2663E21C0020AFB4 /* AppAssembly.swift */; };
 		38AAD9232663EF1B0020AFB4 /* BaseVIPER.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD9222663EF1B0020AFB4 /* BaseVIPER.swift */; };
+		38AAD925266403A50020AFB4 /* SplashPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD924266403A50020AFB4 /* SplashPresenterImpl.swift */; };
+		38AAD929266408A50020AFB4 /* SplashRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD928266408A50020AFB4 /* SplashRouterImpl.swift */; };
+		38AAD92B26640A110020AFB4 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD92A26640A110020AFB4 /* SplashAssembly.swift */; };
+		38AAD92E26640BAE0020AFB4 /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD92D26640BAE0020AFB4 /* ReuseIdentifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		38AAD91A2663D8690020AFB4 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		38AAD91F2663E21C0020AFB4 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		38AAD9222663EF1B0020AFB4 /* BaseVIPER.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVIPER.swift; sourceTree = "<group>"; };
+		38AAD924266403A50020AFB4 /* SplashPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterImpl.swift; sourceTree = "<group>"; };
+		38AAD928266408A50020AFB4 /* SplashRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouterImpl.swift; sourceTree = "<group>"; };
+		38AAD92A26640A110020AFB4 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
+		38AAD92D26640BAE0020AFB4 /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		38AAD9032663D7530020AFB4 /* CiceSports */ = {
 			isa = PBXGroup;
 			children = (
+				38AAD92C26640B880020AFB4 /* Helpers */,
 				38AAD9212663EEF70020AFB4 /* BaseVIPER */,
 				38AAD91E2663E1900020AFB4 /* Core */,
 				38AAD9182663D8280020AFB4 /* Modules */,
@@ -82,6 +91,9 @@
 			children = (
 				38AAD9192663D8690020AFB4 /* SplashViewController.swift */,
 				38AAD91A2663D8690020AFB4 /* SplashViewController.xib */,
+				38AAD924266403A50020AFB4 /* SplashPresenterImpl.swift */,
+				38AAD928266408A50020AFB4 /* SplashRouterImpl.swift */,
+				38AAD92A26640A110020AFB4 /* SplashAssembly.swift */,
 			);
 			path = SplashView;
 			sourceTree = "<group>";
@@ -100,6 +112,14 @@
 				38AAD9222663EF1B0020AFB4 /* BaseVIPER.swift */,
 			);
 			path = BaseVIPER;
+			sourceTree = "<group>";
+		};
+		38AAD92C26640B880020AFB4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				38AAD92D26640BAE0020AFB4 /* ReuseIdentifier.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,9 +193,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				38AAD9202663E21C0020AFB4 /* AppAssembly.swift in Sources */,
+				38AAD92B26640A110020AFB4 /* SplashAssembly.swift in Sources */,
+				38AAD925266403A50020AFB4 /* SplashPresenterImpl.swift in Sources */,
 				38AAD9052663D7530020AFB4 /* AppDelegate.swift in Sources */,
 				38AAD91B2663D8690020AFB4 /* SplashViewController.swift in Sources */,
 				38AAD9232663EF1B0020AFB4 /* BaseVIPER.swift in Sources */,
+				38AAD929266408A50020AFB4 /* SplashRouterImpl.swift in Sources */,
+				38AAD92E26640BAE0020AFB4 /* ReuseIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
