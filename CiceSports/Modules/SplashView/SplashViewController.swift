@@ -25,5 +25,11 @@ class SplashViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    /*
+     Creado un proyecto.
+     Iniciamos git
+     Hemos salvado en localls -la
+     */
 
 }
