@@ -30,4 +30,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 /*
  - Meter chicha en el appdelegate no es buena práctica. Solo notificaciones psh y cosas así,. Nada más
+ - Esto es un patrón Singleton:  Controla la carga perezosa de ciertos de datos en la aplicación en cierto momento.
+ 
+ 
+ var window: UIWindow?
+ let appAssembly: AppAssemblyProtocol = AppAssembly()
+
+
+ func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+     window = UIWindow(frame: UIScreen.main.bounds)
+     if let windowDes = window {
+         appAssembly.setPrincipalViewController(in: windowDes)
+     }
+     
+     return true
+ }
  */
