@@ -8,22 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		38AAD9052663D7530020AFB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD9042663D7530020AFB4 /* AppDelegate.swift */; };
-		38AAD9072663D7530020AFB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD9062663D7530020AFB4 /* SceneDelegate.swift */; };
-		38AAD9092663D7530020AFB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD9082663D7530020AFB4 /* ViewController.swift */; };
-		38AAD90C2663D7530020AFB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AAD90A2663D7530020AFB4 /* Main.storyboard */; };
 		38AAD90E2663D7550020AFB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AAD90D2663D7550020AFB4 /* Assets.xcassets */; };
 		38AAD9112663D7550020AFB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AAD90F2663D7550020AFB4 /* LaunchScreen.storyboard */; };
+		38AAD91B2663D8690020AFB4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD9192663D8690020AFB4 /* SplashViewController.swift */; };
+		38AAD91C2663D8690020AFB4 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AAD91A2663D8690020AFB4 /* SplashViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		38AAD9012663D7530020AFB4 /* CiceSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AAD9042663D7530020AFB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38AAD9062663D7530020AFB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		38AAD9082663D7530020AFB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		38AAD90B2663D7530020AFB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38AAD90D2663D7550020AFB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38AAD9102663D7550020AFB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38AAD9122663D7550020AFB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38AAD9192663D8690020AFB4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		38AAD91A2663D8690020AFB4 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +54,30 @@
 		38AAD9032663D7530020AFB4 /* CiceSports */ = {
 			isa = PBXGroup;
 			children = (
+				38AAD9182663D8280020AFB4 /* Modules */,
 				38AAD9042663D7530020AFB4 /* AppDelegate.swift */,
-				38AAD9062663D7530020AFB4 /* SceneDelegate.swift */,
-				38AAD9082663D7530020AFB4 /* ViewController.swift */,
-				38AAD90A2663D7530020AFB4 /* Main.storyboard */,
 				38AAD90D2663D7550020AFB4 /* Assets.xcassets */,
 				38AAD90F2663D7550020AFB4 /* LaunchScreen.storyboard */,
 				38AAD9122663D7550020AFB4 /* Info.plist */,
 			);
 			path = CiceSports;
+			sourceTree = "<group>";
+		};
+		38AAD9182663D8280020AFB4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				38AAD91D2663D8810020AFB4 /* SplashView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		38AAD91D2663D8810020AFB4 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				38AAD9192663D8690020AFB4 /* SplashViewController.swift */,
+				38AAD91A2663D8690020AFB4 /* SplashViewController.xib */,
+			);
+			path = SplashView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +138,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				38AAD9112663D7550020AFB4 /* LaunchScreen.storyboard in Resources */,
+				38AAD91C2663D8690020AFB4 /* SplashViewController.xib in Resources */,
 				38AAD90E2663D7550020AFB4 /* Assets.xcassets in Resources */,
-				38AAD90C2663D7530020AFB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +150,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38AAD9092663D7530020AFB4 /* ViewController.swift in Sources */,
 				38AAD9052663D7530020AFB4 /* AppDelegate.swift in Sources */,
-				38AAD9072663D7530020AFB4 /* SceneDelegate.swift in Sources */,
+				38AAD91B2663D8690020AFB4 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		38AAD90A2663D7530020AFB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38AAD90B2663D7530020AFB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		38AAD90F2663D7550020AFB4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,7 +299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cice.CiceSports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cice.CiceSports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
