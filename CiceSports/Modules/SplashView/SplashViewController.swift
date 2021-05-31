@@ -7,10 +7,12 @@
 
 import UIKit
 
+
 class SplashViewController: BaseViewController<SplashPresenterProtocol>, ReuseIdentifierInterfaceViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter?.fetchDataFromHeroku()
 
         // Do any additional setup after loading the view.
     }
@@ -22,7 +24,7 @@ class SplashViewController: BaseViewController<SplashPresenterProtocol>, ReuseId
     /*
      Creado un proyecto.
      Iniciamos git
-     Hemos salvado en localls -la
+     Hemos salvado en local, ls -la
      */
 
 }

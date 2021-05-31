@@ -18,6 +18,12 @@
 		38AAD929266408A50020AFB4 /* SplashRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD928266408A50020AFB4 /* SplashRouterImpl.swift */; };
 		38AAD92B26640A110020AFB4 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD92A26640A110020AFB4 /* SplashAssembly.swift */; };
 		38AAD92E26640BAE0020AFB4 /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD92D26640BAE0020AFB4 /* ReuseIdentifier.swift */; };
+		38AAD93126645DE90020AFB4 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD93026645DE90020AFB4 /* RequestManager.swift */; };
+		38AAD93426645F620020AFB4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD93326645F620020AFB4 /* Utils.swift */; };
+		38AAD937266471C10020AFB4 /* SplashProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD936266471C10020AFB4 /* SplashProviderImpl.swift */; };
+		38AAD93C2664D7330020AFB4 /* SplashInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD93B2664D7330020AFB4 /* SplashInteractorImpl.swift */; };
+		38AAD93F2664E73B0020AFB4 /* ResponseMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD93E2664E73B0020AFB4 /* ResponseMenuModel.swift */; };
+		38AAD94726650A820020AFB4 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD94626650A820020AFB4 /* MenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		38AAD928266408A50020AFB4 /* SplashRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouterImpl.swift; sourceTree = "<group>"; };
 		38AAD92A26640A110020AFB4 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
 		38AAD92D26640BAE0020AFB4 /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
+		38AAD93026645DE90020AFB4 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		38AAD93326645F620020AFB4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		38AAD936266471C10020AFB4 /* SplashProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProviderImpl.swift; sourceTree = "<group>"; };
+		38AAD93B2664D7330020AFB4 /* SplashInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractorImpl.swift; sourceTree = "<group>"; };
+		38AAD93E2664E73B0020AFB4 /* ResponseMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMenuModel.swift; sourceTree = "<group>"; };
+		38AAD94626650A820020AFB4 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,8 @@
 		38AAD9032663D7530020AFB4 /* CiceSports */ = {
 			isa = PBXGroup;
 			children = (
+				38AAD93226645F500020AFB4 /* Utils */,
+				38AAD92F26645DB10020AFB4 /* Managers */,
 				38AAD92C26640B880020AFB4 /* Helpers */,
 				38AAD9212663EEF70020AFB4 /* BaseVIPER */,
 				38AAD91E2663E1900020AFB4 /* Core */,
@@ -89,11 +103,13 @@
 		38AAD91D2663D8810020AFB4 /* SplashView */ = {
 			isa = PBXGroup;
 			children = (
+				38AAD94526650A2C0020AFB4 /* ViewModel */,
+				38AAD935266471930020AFB4 /* Infrastucture */,
 				38AAD9192663D8690020AFB4 /* SplashViewController.swift */,
 				38AAD91A2663D8690020AFB4 /* SplashViewController.xib */,
 				38AAD924266403A50020AFB4 /* SplashPresenterImpl.swift */,
+				38AAD93B2664D7330020AFB4 /* SplashInteractorImpl.swift */,
 				38AAD928266408A50020AFB4 /* SplashRouterImpl.swift */,
-				38AAD92A26640A110020AFB4 /* SplashAssembly.swift */,
 			);
 			path = SplashView;
 			sourceTree = "<group>";
@@ -120,6 +136,48 @@
 				38AAD92D26640BAE0020AFB4 /* ReuseIdentifier.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		38AAD92F26645DB10020AFB4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				38AAD93026645DE90020AFB4 /* RequestManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		38AAD93226645F500020AFB4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				38AAD93326645F620020AFB4 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		38AAD935266471930020AFB4 /* Infrastucture */ = {
+			isa = PBXGroup;
+			children = (
+				38AAD93D2664E7130020AFB4 /* ServerModel */,
+				38AAD92A26640A110020AFB4 /* SplashAssembly.swift */,
+				38AAD936266471C10020AFB4 /* SplashProviderImpl.swift */,
+			);
+			path = Infrastucture;
+			sourceTree = "<group>";
+		};
+		38AAD93D2664E7130020AFB4 /* ServerModel */ = {
+			isa = PBXGroup;
+			children = (
+				38AAD93E2664E73B0020AFB4 /* ResponseMenuModel.swift */,
+			);
+			path = ServerModel;
+			sourceTree = "<group>";
+		};
+		38AAD94526650A2C0020AFB4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38AAD94626650A820020AFB4 /* MenuViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,11 +251,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				38AAD9202663E21C0020AFB4 /* AppAssembly.swift in Sources */,
+				38AAD94726650A820020AFB4 /* MenuViewModel.swift in Sources */,
+				38AAD93F2664E73B0020AFB4 /* ResponseMenuModel.swift in Sources */,
 				38AAD92B26640A110020AFB4 /* SplashAssembly.swift in Sources */,
 				38AAD925266403A50020AFB4 /* SplashPresenterImpl.swift in Sources */,
 				38AAD9052663D7530020AFB4 /* AppDelegate.swift in Sources */,
+				38AAD937266471C10020AFB4 /* SplashProviderImpl.swift in Sources */,
 				38AAD91B2663D8690020AFB4 /* SplashViewController.swift in Sources */,
+				38AAD93426645F620020AFB4 /* Utils.swift in Sources */,
 				38AAD9232663EF1B0020AFB4 /* BaseVIPER.swift in Sources */,
+				38AAD93126645DE90020AFB4 /* RequestManager.swift in Sources */,
+				38AAD93C2664D7330020AFB4 /* SplashInteractorImpl.swift in Sources */,
 				38AAD929266408A50020AFB4 /* SplashRouterImpl.swift in Sources */,
 				38AAD92E26640BAE0020AFB4 /* ReuseIdentifier.swift in Sources */,
 			);
