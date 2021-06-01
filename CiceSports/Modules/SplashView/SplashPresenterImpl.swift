@@ -10,14 +10,17 @@ import Foundation
 
 protocol SplashPresenterProtocol {
     func fetchDataFromHeroku()
+    func showHomeTabBar()
 }
 
 
-class SplashPresenterImpl: BasePresenter<SplashViewController, SplashRouterProtocol> {
+class SplashPresenterImpl: BasePresenter<SplashViewControllerProtocol, SplashRouterProtocol> {
+                                        // Conexión con la vista
     
     var interactor: SplashInteractorProtocol?
     var viewModel: [MenuResponse] = []
-}
+} // Este es el Property Wrapper de Apple.
+
 
 extension SplashPresenterImpl: SplashPresenterProtocol {
     internal func fetchDataFromHeroku() {
@@ -26,12 +29,19 @@ extension SplashPresenterImpl: SplashPresenterProtocol {
             if let resultArraydDes = resultArray {
                 self?.viewModel.removeAll()
                 self?.viewModel = resultArraydDes
+                self?.viewController?.fetchDataFromPresent()
             }
         }, failure: { (error) in
             print(error?.localizedDescription ?? "Aquí Andres mete gamba")
         })
     }
+    
+    internal func showHomeTabBar() {
+        self.router.showApp(dataMenu: self.viewModel)
+    }
 }
+
+//Aqui estoy haciendo un Output a la vista
 
 /*
  Una cosa es la clase y otra la extensión. Es recomendable hacerlo como está aquí.

@@ -31,4 +31,3 @@ extension SplashInteractorImpl: SplashInteractorProtocol {
         }
     }
 }
-// @escaping - Callback

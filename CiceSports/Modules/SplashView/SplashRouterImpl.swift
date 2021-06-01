@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol SplashRouterProtocol {
-    func goToDetailVC()
+    func showApp(dataMenu: [MenuResponse])
 }
 
 
@@ -18,7 +18,9 @@ class SplashRouterImpl: BaseRouter<SplashPresenterProtocol> {
 }
 
 extension SplashRouterImpl: SplashRouterProtocol {
-    internal func goToDetailVC(){
-        //
+    internal func showApp(dataMenu: [MenuResponse]){
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        let assembly = AppAssembly()
+        let vc = HomeTabBarAssembly.homeTabBarController()
     }
 }

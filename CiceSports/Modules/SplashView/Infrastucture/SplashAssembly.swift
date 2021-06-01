@@ -24,13 +24,13 @@ final public class SplashAssembly {
     }
     
     static func splashPresenter(viewController: SplashViewController) -> SplashPresenterProtocol {
-        let presenter = SplashPresenterImpl(viewController: viewController) // ya he dicho que R puede ser nil por eso no lo incluyo.
+        let presenter = SplashPresenterImpl(viewController: viewController) 
         presenter.router = splashRouter(viewController: viewController, presenter: presenter)
-        presenter.interactor = splashInteractor() //
+        presenter.interactor = splashInteractor()
             return presenter
     }
-    
     // Si no inicializo la variable interactor no me va a retornar el objeto impl. Si no tengo estas lineas no puego gestionarlo independientemente. El interactor no dependa de un protocolo. Puedo ponerselo a cualquier vista, en cualquier parte. Puede llegar a ser reutilizable en otras partes.
+    
     static func splashInteractor() -> SplashInteractorProtocol {
         let interactor = SplashInteractorImpl()
         return interactor

@@ -54,7 +54,11 @@ struct URLEndpoint {
     
     static let baseUrl =  "https://app-cicesports.herokuapp.com/"
     
-    static let endpointMenu = "iCoMenu"
+    static let endpointMenu = "iCoMenuResponse"
+}
+
+struct AutheHeroku {
+    static let authHeroku = "Bearer 123456789"
 }
 
 

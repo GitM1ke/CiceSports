@@ -15,14 +15,42 @@ protocol AppAssemblyProtocol {
 class AppAssembly: AppAssemblyProtocol {  //Aquí vamos a personalizar toda la interfaz y el appdelegate quedará limpio
     
     var actualViewController: UIViewController!
+    public typealias HTTPheaders = [String: String]
+    
     
     internal func setPrincipalViewController(in window: UIWindow) {  //internal lo hace super privado
+        
+        self.customUI()
         actualViewController = SplashAssembly.splashNavigationController() //Puedo quitarle el navigation y solo usar splash...
         window.rootViewController = actualViewController
         window.makeKeyAndVisible()
-        
-         
     }
+    
+    internal func createSlidingMenu(window: UIWindow, vc: UIViewController, menu: [MenuResponse]) {
+        self.customUI()
+        let fromViewController = vc
+        let rearViewController = MenuViewController()
+    }
+    
+    fileprivate func customUI() {
+        let navBar = UINavigationBar.appearance()
+        let tabBar = UITabBar.appearance()
+        //let toolBar = UIToolbar.appearance()
+        
+        navBar.barTintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        tabBar.barTintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        tabBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        navBar.barStyle = .black
+        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
+        
+    }
+    
+    public static let defaultHTTPHeaders: HTTPheaders = {
+        let BearerAuthentication = AutheHeroku.authHeroku
+        return [
+            "Authorization": BearerAuthentication
+        ]
+    }()
 }
 
 /*

@@ -21,13 +21,17 @@ class RequestManager: RequestManagerProtocol {
     {
         
         let endpoint = requestDto.endpoint
+        var urlRequest = URLRequest(url: URL(string: endpoint)!)
+        let headers = AppAssembly.defaultHTTPHeaders
+        // se crea cuando nace la app - appdelegate, appassembly
         
-        guard let urlDes = URL(string: endpoint) else {
-            preconditionFailure("\(ApiError.unknow)")
+        headers.forEach { (key, value) in
+            urlRequest.setValue(value, forHTTPHeaderField: key)
         }
+        // Todo a partir del let headers puedo ponerlo en el requestDTO?
 
         return URLSession.shared
-            .dataTaskPublisher(for: urlDes)
+            .dataTaskPublisher(for: urlRequest)
             .mapError { (error) -> ApiError in
                 ApiError.unknow
             }
