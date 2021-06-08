@@ -19,8 +19,9 @@ class SplashRouterImpl: BaseRouter<SplashPresenterProtocol> {
 
 extension SplashRouterImpl: SplashRouterProtocol {
     internal func showApp(dataMenu: [MenuResponse]){
-        let delegate = UIApplication.shared.delegate as? AppDelegate
+        let delegate = UIApplication.shared.delegate as! AppDelegate
         let assembly = AppAssembly()
         let vc = HomeTabBarAssembly.homeTabBarController()
+        assembly.createSlidingMenu(window: delegate.window!, vc: vc, menu: dataMenu)
     }
 }

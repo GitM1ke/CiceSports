@@ -13,7 +13,7 @@ protocol SplashInteractorProtocol {
 }
 
 class SplashInteractorImpl: BaseInteractor<SplashPresenterProtocol>{
-    let provider: SplashProviderProtocol = SplashProviderImpl()
+    var provider: SplashProviderProtocol = SplashProviderImpl()
 }
 
 extension SplashInteractorImpl: SplashInteractorProtocol {

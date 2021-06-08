@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384811B6266F854E00D925A9 /* TrainingOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384811B4266F854E00D925A9 /* TrainingOneViewController.swift */; };
+		384811B7266F854E00D925A9 /* TrainingOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384811B5266F854E00D925A9 /* TrainingOneViewController.xib */; };
 		38AAD9052663D7530020AFB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAD9042663D7530020AFB4 /* AppDelegate.swift */; };
 		38AAD90E2663D7550020AFB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AAD90D2663D7550020AFB4 /* Assets.xcassets */; };
 		38AAD9112663D7550020AFB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AAD90F2663D7550020AFB4 /* LaunchScreen.storyboard */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		384811B4266F854E00D925A9 /* TrainingOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingOneViewController.swift; sourceTree = "<group>"; };
+		384811B5266F854E00D925A9 /* TrainingOneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingOneViewController.xib; sourceTree = "<group>"; };
 		38AAD9012663D7530020AFB4 /* CiceSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AAD9042663D7530020AFB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38AAD90D2663D7550020AFB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		384811AB266F848600D925A9 /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				384811AC266F84C200D925A9 /* N1 */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
+		384811AC266F84C200D925A9 /* N1 */ = {
+			isa = PBXGroup;
+			children = (
+				384811B4266F854E00D925A9 /* TrainingOneViewController.swift */,
+				384811B5266F854E00D925A9 /* TrainingOneViewController.xib */,
+			);
+			path = N1;
+			sourceTree = "<group>";
+		};
 		38AAD8F82663D7530020AFB4 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +131,7 @@
 		38AAD9182663D8280020AFB4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				384811AB266F848600D925A9 /* Training */,
 				38AAD9562665FBED0020AFB4 /* Menu */,
 				38AAD94F2665A92A0020AFB4 /* Home */,
 				38AAD91D2663D8810020AFB4 /* SplashView */,
@@ -287,6 +309,7 @@
 				38AAD9112663D7550020AFB4 /* LaunchScreen.storyboard in Resources */,
 				38AAD91C2663D8690020AFB4 /* SplashViewController.xib in Resources */,
 				38AAD95A2665FC0F0020AFB4 /* MenuViewController.xib in Resources */,
+				384811B7266F854E00D925A9 /* TrainingOneViewController.xib in Resources */,
 				38AAD9532665A9AD0020AFB4 /* HomeTabBarController.xib in Resources */,
 				38AAD90E2663D7550020AFB4 /* Assets.xcassets in Resources */,
 			);
@@ -314,6 +337,7 @@
 				38AAD93126645DE90020AFB4 /* RequestManager.swift in Sources */,
 				38AAD9592665FC0F0020AFB4 /* MenuViewController.swift in Sources */,
 				38AAD93C2664D7330020AFB4 /* SplashInteractorImpl.swift in Sources */,
+				384811B6266F854E00D925A9 /* TrainingOneViewController.swift in Sources */,
 				38AAD929266408A50020AFB4 /* SplashRouterImpl.swift in Sources */,
 				38AAD9522665A9AD0020AFB4 /* HomeTabBarController.swift in Sources */,
 				38AAD92E26640BAE0020AFB4 /* ReuseIdentifier.swift in Sources */,

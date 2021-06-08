@@ -21,7 +21,7 @@ class AppAssembly: AppAssemblyProtocol {  //Aquí vamos a personalizar toda la i
     internal func setPrincipalViewController(in window: UIWindow) {  //internal lo hace super privado
         
         self.customUI()
-        actualViewController = SplashAssembly.splashNavigationController() //Puedo quitarle el navigation y solo usar splash...
+        actualViewController = SplashAssembly.splashViewController() //Puedo quitarle el navigation y solo usar splash...
         window.rootViewController = actualViewController
         window.makeKeyAndVisible()
     }
@@ -30,6 +30,12 @@ class AppAssembly: AppAssemblyProtocol {  //Aquí vamos a personalizar toda la i
         self.customUI()
         let fromViewController = vc
         let rearViewController = MenuViewController()
+        rearViewController.aux = menu
+        let swRevealVC = SWRevealViewController(rearViewController: rearViewController, frontViewController: fromViewController) //Esto es lo que nos permite el Bridge Header, acceder a un objeto que está en Objective_C
+        swRevealVC?.toggleAnimationType = SWRevealToggleAnimationType.easeOut
+        swRevealVC?.toggleAnimationDuration = 0.30
+        window.rootViewController = swRevealVC
+        window.makeKeyAndVisible()
     }
     
     fileprivate func customUI() {

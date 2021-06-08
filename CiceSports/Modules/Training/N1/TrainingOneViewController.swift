@@ -1,15 +1,15 @@
 //
-//  MenuViewController.swift
+//  TrainingOneViewController.swift
 //  CiceSports
 //
-//  Created by M1keDev on 1/6/21.
+//  Created by M1keDev on 8/6/21.
 //
 
 import UIKit
 
-class MenuViewController: UIViewController {
-    
-    var aux: [MenuResponse] = []
+//Con esto ya tengo la posibilidad de trabajar con un P, un I y lo que necesitemos. Y esta vista se va a encargar de hacer su propia llamada al servicio.
+
+class TrainingOneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

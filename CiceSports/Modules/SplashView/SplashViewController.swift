@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 protocol SplashViewControllerProtocol {
     func fetchDataFromPresent()
 }

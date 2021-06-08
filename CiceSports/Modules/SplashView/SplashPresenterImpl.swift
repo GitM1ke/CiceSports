@@ -37,7 +37,7 @@ extension SplashPresenterImpl: SplashPresenterProtocol {
     }
     
     internal func showHomeTabBar() {
-        self.router.showApp(dataMenu: self.viewModel)
+        self.router?.showApp(dataMenu: self.viewModel)
     }
 }
 
